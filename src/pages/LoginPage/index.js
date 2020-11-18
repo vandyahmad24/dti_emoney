@@ -8,14 +8,21 @@ const LoginPage = ({navigation}) => {
   return (
     <View style={styles.page}>
       <LogoEmoney />
-      <Jarak height={19}/>
+      <Jarak height={19} />
       <InputText placeholder="Email" />
-      <Jarak height={25}/>
+      <Jarak height={25} />
       <InputText placeholder="Password" />
-      <Jarak height={25}/>
-      <CButton tulisan="Klik disini" />
-      <Jarak height={27}/>
-      <CLink title="Register" size={14} onPress={() => navigation.navigate('RegisterPage')} />
+      <Jarak height={25} />
+      <CButton
+        tulisan="Masuk"
+        onPress={() => navigation.replace('HomeScreen')}
+      />
+      <Jarak height={27} />
+      <CLink
+        title="Register"
+        size={14}
+        onPress={() => navigation.navigate('RegisterPage')}
+      />
     </View>
   );
 };

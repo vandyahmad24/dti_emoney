@@ -1,3 +1,4 @@
 import Header from './Header';
-
-export {Header};
+import BottomNavigator from './BottomNavigator';
+import StatusHistory from './StatusHistory';
+export {Header, BottomNavigator, StatusHistory};

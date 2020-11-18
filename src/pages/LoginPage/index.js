@@ -15,7 +15,7 @@ const LoginPage = ({navigation}) => {
       <Jarak height={25} />
       <CButton
         tulisan="Masuk"
-        onPress={() => navigation.replace('HomeScreen')}
+        onPress={() => navigation.replace('MainApp')}
       />
       <Jarak height={27} />
       <CLink

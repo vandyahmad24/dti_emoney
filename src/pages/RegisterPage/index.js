@@ -16,7 +16,7 @@ const RegisterPage = ({navigation}) => {
         <Jarak height={30}/>
         <InputText placeholder="No Handphone" />
         <Jarak height={30}/>
-        <CButton tulisan="Registrasi" onPress={() =>navigation.replace('HomeScreen')}/>
+        <CButton tulisan="Registrasi" onPress={() =>navigation.replace('MainApp')}/>
       </View>
     </View>
   );

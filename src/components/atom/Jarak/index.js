@@ -1,14 +1,8 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {View} from 'react-native';
 
-const Jarak = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+const Jarak = ({height, width}) => {
+  return <View style={{height: height, width: width}} />;
+};
 
-export default Jarak
-
-const styles = StyleSheet.create({})
+export default Jarak;

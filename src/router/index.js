@@ -11,7 +11,9 @@ import {
   QRPay,
   TransferScreen,
   QRKonfirm,
-  TransferSuccess
+  TransferSuccess,
+  TopUpSuccessScreen,
+  PaySuccessScreen
 } from '../pages';
 import {BottomNavigator} from '../components';
 
@@ -72,6 +74,18 @@ const Router = () => {
         options={{headerShown: false}}
       />
     </Stack.Navigator>
+    <Stack.Screen
+        name="TopUpSuccessScreen"
+        component={TopUpSuccessScreen}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+    <Stack.Screen
+    name="PaySuccessScreen"
+    component={PaySuccessScreen}
+    options={{headerShown: false}}
+  />
+</Stack.Navigator>
   );
 };
 

@@ -8,6 +8,8 @@ import QRPay from './QRPay';
 import TransferScreen from './TransferScreen';
 import QRKonfirm from './QRKonfirm';
 import TransferSuccess from './TransferSuccess';
+import TopUpSuccessScreen from './TopUpSuccessScreen';
+import PaySuccessScreen from './PaySuccessScreen';
 
 export {
   LoginPage,
@@ -20,4 +22,6 @@ export {
   TransferScreen,
   QRKonfirm,
   TransferSuccess,
+  TopUpSuccessScreen,
+  PaySuccessScreen
 };

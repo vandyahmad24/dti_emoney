@@ -1,3 +1,6 @@
-import Gambar1 from './artikel1.png';
+import ITopUp from './topup.png';
+import IConfirm from './confirm.png';
+import IQRCode from './qr.png';
+import ITransfer from './transfer.png';
 
-export {Gambar1};
+export {ITopUp, IConfirm, IQRCode, ITransfer};

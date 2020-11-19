@@ -10,6 +10,8 @@ import {
   TopUpScreen,
   QRPay,
   TransferScreen,
+  QRKonfirm,
+  TransferSuccess
 } from '../pages';
 import {BottomNavigator} from '../components';
 
@@ -57,6 +59,16 @@ const Router = () => {
       <Stack.Screen
         name="TransferScreen"
         component={TransferScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="QRKonfirm"
+        component={QRKonfirm}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="TransferSuccess"
+        component={TransferSuccess}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

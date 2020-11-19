@@ -4,6 +4,7 @@ import StatusHistory from './StatusHistory';
 import InfoSaldo from './InfoSaldo';
 import HomeMenu from './HomeMenu';
 import ProfilSegment from './ProfilSegment';
+import NotifTransaksi from './NotifTransaksi';
 export {
   Header,
   BottomNavigator,
@@ -11,4 +12,5 @@ export {
   InfoSaldo,
   HomeMenu,
   ProfilSegment,
+  NotifTransaksi,
 };

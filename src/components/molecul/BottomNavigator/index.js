@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import { colors } from '../../../utils';
-import { TabItem } from '../../atom';
+import {colors} from '../../../utils';
+import {TabItem} from '../../atom';
 
 const BottomNavigator = ({state, descriptors, navigation}) => {
   return (
@@ -38,7 +38,12 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
         };
 
         return (
-          <TabItem type={label} onPress={onPress} onLongPress={onLongPress}/>
+          <TabItem
+            type={label}
+            key={label}
+            onPress={onPress}
+            onLongPress={onLongPress}
+          />
         );
       })}
     </View>
@@ -48,11 +53,11 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
 export default BottomNavigator;
 
 const styles = StyleSheet.create({
-    container:{
-        flexDirection: 'row',
-        justifyContent:'space-between',
-        paddingHorizontal:62,
-        backgroundColor:colors.white,
-        paddingVertical:19,
-    }
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 62,
+    backgroundColor: colors.white,
+    paddingVertical: 19,
+  },
 });

@@ -1,21 +1,24 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {BoxMenu, Jarak} from '../../components/atom';
-import {StatusHistory} from '../../components/molecul';
-import {colors, fonts} from '../../utils';
+import {StatusHistory, InfoSaldo} from '../../components/molecul';
+import {colors} from '../../utils';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <View style={styles.containerText}>
-        <Text style={styles.saldo}>Saldo Anda</Text>
-        <Text style={styles.isiSaldo}>Rp. 1.234.567.000</Text>
-      </View>
+      <InfoSaldo saldo="Rp. 1.234.567.000" />
       <View style={styles.container}>
         <View style={styles.containerTombol}>
-          <BoxMenu type="Top Up" />
-          <BoxMenu type="QR Pay" />
-          <BoxMenu type="Transfer" />
+          <BoxMenu
+            type="Top Up"
+            onPress={() => navigation.navigate('TopUpScreen')}
+          />
+          <BoxMenu type="QR Pay" onPress={() => navigation.navigate('QRPay')} />
+          <BoxMenu
+            type="Transfer"
+            onPress={() => navigation.navigate('TransferScreen')}
+          />
         </View>
         <View style={styles.containerHistory}>
           <Text style={styles.textSaldo}>5 Transaksi Terakhir Anda</Text>
@@ -40,19 +43,12 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 16,
   },
-  containerText: {
-    paddingHorizontal: 20,
-    backgroundColor: 'white',
-    height: 134,
+
+  containerHistory: {
+    marginTop: 30,
   },
-  saldo: {
-    marginTop: 66,
-    fontFamily: fonts.primary.normal,
-    fontSize: 14,
-  },
-  isiSaldo: {
-    fontFamily: fonts.primary[500],
-    fontSize: 32,
+  textSaldo: {
+    textAlign: 'left',
   },
   containerTombol: {
     marginTop: 20,
@@ -72,11 +68,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 23,
-  },
-  containerHistory: {
-    marginTop: 30,
-  },
-  textSaldo: {
-    textAlign: 'left',
   },
 });

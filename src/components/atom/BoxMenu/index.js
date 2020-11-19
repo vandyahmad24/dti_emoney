@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import {AddIcon, QRIcon, TransferIcon} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const BoxMenu = ({type}) => {
+const BoxMenu = ({type, onPress}) => {
   const Icon = () => {
     if (type === 'Top Up') {
       return <AddIcon height={24} width={24} />;
@@ -17,12 +18,12 @@ const BoxMenu = ({type}) => {
     return <AddIcon />;
   };
   return (
-    <View style={styles.page}>
+    <TouchableOpacity style={styles.page} onPress={onPress}>
       <View style={styles.container}>
         <Icon />
       </View>
       <Text style={styles.text}>{type}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

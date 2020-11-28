@@ -13,7 +13,8 @@ import {
   QRKonfirm,
   TransferSuccess,
   TopUpSuccessScreen,
-  PaySuccessScreen
+  PaySuccessScreen,
+  SplashScreen,
 } from '../pages';
 import {BottomNavigator} from '../components';
 
@@ -32,7 +33,12 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="LoginPage">
+    <Stack.Navigator initialRouteName="SplashScreen">
+      <Stack.Screen
+        name="SplashScreen"
+        component={SplashScreen}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="LoginPage"
         component={LoginPage}
@@ -73,19 +79,17 @@ const Router = () => {
         component={TransferSuccess}
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-    <Stack.Screen
+      <Stack.Screen
         name="TopUpSuccessScreen"
         component={TopUpSuccessScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="PaySuccessScreen"
+        component={PaySuccessScreen}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
-    <Stack.Screen
-    name="PaySuccessScreen"
-    component={PaySuccessScreen}
-    options={{headerShown: false}}
-  />
-</Stack.Navigator>
   );
 };
 

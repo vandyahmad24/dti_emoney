@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {fonts, colors} from '../../../utils/';
 
-const CButton = ({tulisan, onPress}) => {
+const CButton = ({tulisan, onPress, disabled}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <TouchableOpacity onPress={onPress} disabled={disabled} style={styles.button}>
       <Text style={styles.styletulisan}>{tulisan}</Text>
     </TouchableOpacity>
   );
